@@ -4,7 +4,7 @@
 #include "loader/nsp.h"
 #include "loader/nca.h"
 #include "exception.h"
-
+#include "loader/keys.h"
 #include <QDebug>
 
 namespace turnip{
@@ -16,6 +16,10 @@ MainWindow::MainWindow(QWidget *parent)
     //F:\BaiduYunDownload\GardenGuardian.nsp
 
     //std::string magic = vfs::FileSystem::magic("F:\\BaiduYunDownload\\GardenGuardian.nsp",5);
+
+    Keys::GetInstance()->Init(KEYSET_RETAIL);
+    Keys::GetInstance()->InitProdKeys("D:\\Qt\\turnip\\prod.keys");
+
     NSP* loader = new NSP("F:\\BaiduYunDownload\\GardenGuardian.nsp");
     bool ret = loader->Parse();
     if(ret){

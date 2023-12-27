@@ -1,3 +1,6 @@
-[submodule "libraries/mbedtls"]
-	path = libraries/mbedtls
-	url = https://github.com/Mbed-TLS/mbedtls.git
+[submodule "libraries/SDL"]
+	path = libraries/SDL
+	url = https://github.com/libsdl-org/SDL.git
+[submodule "libraries/fmt"]
+	path = libraries/fmt
+	url = https://github.com/fmtlib/fmt.git
